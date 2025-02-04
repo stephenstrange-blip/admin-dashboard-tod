@@ -1,9 +1,9 @@
 const projectNames = document.querySelectorAll(".content-projects > div")
 const titlePlaceHolder = document.getElementsByClassName("project-title")
-console.log(projectNames, titlePlaceHolder)
+
 const announcements = document.querySelectorAll(".announcement")
 const announcementsPlaceHolder = document.getElementsByClassName("announcement-title")
-console.log(announcements, announcementsPlaceHolder)
+
 
 var index = 0;
 
@@ -51,5 +51,19 @@ const placeTitle = (titles, placeHolders, index = 0, fontSize = "1rem", fontWeig
 placeTitle(projectNames, titlePlaceHolder, index);
 placeTitle(announcements, announcementsPlaceHolder, index, ".9rem")
 
+const getImg = document.querySelectorAll("img");
 
+getImg.forEach((img) => {
+    
+    if (img.alt === "S") {
+        img.src = "content-header-svg/bookmark-svgrepo-com.svg"
+    } else if (img.alt === "E") {
+        img.src = "content-header-svg/favorites-svgrepo-com.svg"
+    } else if (img.alt === "Y") {
+        img.src = "content-header-svg/link-minimalistic-svgrepo-com.svg"
+    }
+    img.width = "40"
+    img.height = "40"
+
+})
 
